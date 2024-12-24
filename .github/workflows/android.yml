@@ -19,7 +19,7 @@ jobs:
     #    args: git submodule update --init --recursive
     - name: Cache Qt
       id: cache-qt
-      uses: actions/cache@v1
+      uses: actions/cache@v4
       with:
         path: ../Qt
         key: ${{ runner.os }}-QtCache

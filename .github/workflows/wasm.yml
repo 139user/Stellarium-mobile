@@ -63,7 +63,7 @@ jobs:
         ls -lrt
         zip stellariumMobile_wasm_5_14_2.zip ./*
         
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v4
       with:
         name: stellariumMobile
         path: stellariumMobile_wasm_5_14_2.zip

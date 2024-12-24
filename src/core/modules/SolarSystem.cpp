@@ -981,9 +981,9 @@ void SolarSystem::computeTransMatrices(double date, const Vec3d& observerPos)
 }
 
 // And sort them from the furthest to the closest to the observer
-struct biggerDistance : public std::binary_function<PlanetP, PlanetP, bool>
+struct biggerDistance
 {
-	bool operator()(PlanetP p1, PlanetP p2)
+	bool operator()(const PlanetP& p1, const PlanetP& p2) const
 	{
 		return p1->getDistance() > p2->getDistance();
 	}
