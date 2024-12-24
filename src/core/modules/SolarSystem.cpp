@@ -1005,14 +1005,14 @@ void SolarSystem::draw(StelCore* core)
 	}
 
 	// And sort them from the furthest to the closest
-	sort(systemPlanets.begin(),systemPlanets.end(),biggerDistance());
+	std::sort(systemPlanets.begin(),systemPlanets.end(),biggerDistance());
 
 	if (trailFader.getInterstate()>0.0000001f)
 	{
-		StelPainter* sPainter = new StelPainter(core->getProjection2d());
-		allTrails->setOpacity(trailFader.getInterstate());
-		allTrails->draw(core, sPainter);
-		delete sPainter;
+			StelPainter* sPainter = new StelPainter(core->getProjection2d());
+			allTrails->setOpacity(trailFader.getInterstate());
+			allTrails->draw(core, sPainter);
+			delete sPainter;
 	}
 
 	// Make some voodoo to determine when labels should be displayed
