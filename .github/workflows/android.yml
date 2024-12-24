@@ -28,7 +28,7 @@ jobs:
       with:
         target: 'android'
         version: '5.15.1'
-        modules: 'qtcharts qtwebengine qtscript'
+        modules: 'qtcharts qtwebengine qtscript qtandroidextras'
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - name: Setup NDK path
       shell: bash
